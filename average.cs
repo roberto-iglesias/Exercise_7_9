@@ -4,25 +4,25 @@ public class Average
 {
 	public static void Main()
 	{
-		double a=0, b, c=0, d;
-		string s;
+		double sum=0, mark, c=0, average;
+		string exit;
 		
 		Console.Write("Insert a mark: ");
-		s=Console.ReadLine();	// we read the mark as string to check the word "end"	 
+		exit=Console.ReadLine();	// we read the mark as string to check the word "end"	 
 		
-		while(s!="end")
+		while(exit!="end")
 		{  // if the mark isn't an end then we pass it to double to work with it
-			b=Convert.ToDouble(s);
+			mark=Convert.ToDouble(exit);
 			c++;   //counter of numbers
-			a+=b;  // sum of all the notes
+			sum+=mark;  // sum of all the notes
 			Console.Write("Insert a mark: ");
-			s=Console.ReadLine();
+			exit=Console.ReadLine();
 		}
 		
 		if(c!=0)
 		{
-			d=a/c;  //calculate the average
-			Console.WriteLine("The average is {0}.",d);
+			average=sum/c;  //calculate the average
+			Console.WriteLine("The average is {0}.",average);
 		}
 	}
 }
